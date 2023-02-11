@@ -235,6 +235,28 @@ export const testSetAndClearOfMapPropertiesWithConflicts = tc => {
 /**
  * @param {t.TestCase} tc
  */
+export const testSetAndClearOfMapPropertiesWithConflicts2 = tc => {
+  const { testConnector, users, map0, map1, map2, map3 } = init(tc, { users: 4 })
+  map0.set('stuff', 'c0')
+  map1.set('stuff', 'c1')
+  map1.set('stuff', 'c2')
+  map2.set('stuff', 'c3')
+  testConnector.flushAllMessages()
+  map3.clear()
+  map0.set('otherstuff', 'not deleted')
+  testConnector.flushAllMessages()
+  for (const user of users) {
+    const u = user.getMap('map')
+    t.assert(u.get('stuff') === undefined)
+    t.assert(u.get('otherstuff') === 'not deleted')
+    t.assert(u.size === 1, `map size after clear is ${u.size}, expected 1`)
+  }
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
 export const testGetAndSetOfMapPropertyWithThreeConflicts = tc => {
   const { testConnector, users, map0, map1, map2 } = init(tc, { users: 3 })
   map0.set('stuff', 'c0')

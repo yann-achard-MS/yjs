@@ -1,0 +1,512 @@
+
+> yjs@13.5.11 test C:\Work\yjs
+> npm run dist && node ./dist/tests.cjs --repetition-time 50
+
+
+> yjs@13.5.11 dist C:\Work\yjs
+> rm -rf dist && rollup -c && tsc
+
+[37m[1/161] [35mdoc: [34mclient id duplicate change[0m
+  [38;5;208m[1m[yjs] [2m[31mChanged the client-id because another client seems to be using it.[0m
+[32m[1mSuccess: [2m[0mclient id duplicate change[37m in 5.12ms
+repeat: npm run test -- --filter "\[1/" [0m
+[37m[2/161] [35mdoc: [34mget type empty id[0m
+[32m[1mSuccess: [2m[0mget type empty id[37m in 1.79ms
+repeat: npm run test -- --filter "\[2/" [0m
+[37m[3/161] [35mdoc: [34mto j s o n[0m
+[32m[1mSuccess: [2m[0mto j s o n[37m in 1.25ms
+repeat: npm run test -- --filter "\[3/" [0m
+[37m[4/161] [35mdoc: [34msubdoc[0m
+[32m[1mSuccess: [2m[0msubdoc[37m in 2.1ms
+repeat: npm run test -- --filter "\[4/" [0m
+[37m[5/161] [35mmap: [34mmap having iterable as constructor param tests[0m
+[32m[1mSuccess: [2m[0mmap having iterable as constructor param tests[37m in 4.07ms
+repeat: npm run test -- --filter "\[5/" --seed 1196594757[0m
+[37m[6/161] [35mmap: [34mbasic map tests[0m
+[32m[1mSuccess: [2m[0mbasic map tests[37m in 8.98ms
+repeat: npm run test -- --filter "\[6/" --seed 3414407320[0m
+[37m[7/161] [35mmap: [34mget and set of map property[0m
+[32m[1mSuccess: [2m[0mget and set of map property[37m in 2.02ms
+repeat: npm run test -- --filter "\[7/" --seed 3286302026[0m
+[37m[8/161] [35mmap: [34mymap sets ymap[0m
+[32m[1mSuccess: [2m[0mymap sets ymap[37m in 1.61ms
+repeat: npm run test -- --filter "\[8/" --seed 1189184798[0m
+[37m[9/161] [35mmap: [34mymap sets yarray[0m
+[32m[1mSuccess: [2m[0mymap sets yarray[37m in 2.06ms
+repeat: npm run test -- --filter "\[9/" --seed 462419205[0m
+[37m[10/161] [35mmap: [34mget and set of map property syncs[0m
+[32m[1mSuccess: [2m[0mget and set of map property syncs[37m in 1.27ms
+repeat: npm run test -- --filter "\[10/" --seed 2321060290[0m
+[37m[11/161] [35mmap: [34mget and set of map property with conflict[0m
+[32m[1mSuccess: [2m[0mget and set of map property with conflict[37m in 2.63ms
+repeat: npm run test -- --filter "\[11/" --seed 3104054154[0m
+[37m[12/161] [35mmap: [34msize and delete of map property[0m
+[32m[1mSuccess: [2m[0msize and delete of map property[37m in 505.8μs
+repeat: npm run test -- --filter "\[12/" --seed 3078203542[0m
+[37m[13/161] [35mmap: [34mget and set and delete of map property[0m
+[32m[1mSuccess: [2m[0mget and set and delete of map property[37m in 2.95ms
+repeat: npm run test -- --filter "\[13/" --seed 3657175447[0m
+[37m[14/161] [35mmap: [34mset and clear of map properties[0m
+[32m[1mSuccess: [2m[0mset and clear of map properties[37m in 1.06ms
+repeat: npm run test -- --filter "\[14/" --seed 3820945622[0m
+[37m[15/161] [35mmap: [34mset and clear of map properties with conflicts[0m
+[32m[1mSuccess: [2m[0mset and clear of map properties with conflicts[37m in 6.9ms
+repeat: npm run test -- --filter "\[15/" --seed 250050564[0m
+[37m[16/161] [35mmap: [34mset and clear of map properties with conflicts2[0m
+[32m[1mSuccess: [2m[0mset and clear of map properties with conflicts2[37m in 5.23ms
+repeat: npm run test -- --filter "\[16/" --seed 3665024629[0m
+[37m[17/161] [35mmap: [34mget and set of map property with three conflicts[0m
+[32m[1mSuccess: [2m[0mget and set of map property with three conflicts[37m in 3.02ms
+repeat: npm run test -- --filter "\[17/" --seed 734727268[0m
+[37m[18/161] [35mmap: [34mget and set and delete of map property with three conflicts[0m
+[32m[1mSuccess: [2m[0mget and set and delete of map property with three conflicts[37m in 6.48ms
+repeat: npm run test -- --filter "\[18/" --seed 1899421483[0m
+[37m[19/161] [35mmap: [34mobserve deep properties[0m
+[32m[1mSuccess: [2m[0mobserve deep properties[37m in 4.79ms
+repeat: npm run test -- --filter "\[19/" --seed 2919738732[0m
+[37m[20/161] [35mmap: [34mobservers using observedeep[0m
+[32m[1mSuccess: [2m[0mobservers using observedeep[37m in 2.21ms
+repeat: npm run test -- --filter "\[20/" --seed 1038956897[0m
+[37m[21/161] [35mmap: [34mthrows add and update and delete events[0m
+[32m[1mSuccess: [2m[0mthrows add and update and delete events[37m in 2.14ms
+repeat: npm run test -- --filter "\[21/" --seed 1776351477[0m
+[37m[22/161] [35mmap: [34mthrows delete events on clear[0m
+[32m[1mSuccess: [2m[0mthrows delete events on clear[37m in 1.52ms
+repeat: npm run test -- --filter "\[22/" --seed 3658514757[0m
+[37m[23/161] [35mmap: [34mchange event[0m
+[32m[1mSuccess: [2m[0mchange event[37m in 2.94ms
+repeat: npm run test -- --filter "\[23/" --seed 601717908[0m
+[37m[24/161] [35mmap: [34mymap event exceptions should complete transaction[0m
+  [32m⇖ This Error was expected[0m
+  [32m⇖ This Error was expected[0m
+[32m[1mSuccess: [2m[0mymap event exceptions should complete transaction[37m in 556.2μs
+repeat: npm run test -- --filter "\[24/" [0m
+[37m[25/161] [35mmap: [34mymap event has correct value when setting a primitive[0m
+[32m[1mSuccess: [2m[0mymap event has correct value when setting a primitive[37m in 1.9ms
+repeat: npm run test -- --filter "\[25/" --seed 1162968383[0m
+[37m[26/161] [35mmap: [34mymap event has correct value when setting a primitive from other user[0m
+[32m[1mSuccess: [2m[0mymap event has correct value when setting a primitive from other user[37m in 2.26ms
+repeat: npm run test -- --filter "\[26/" --seed 222434879[0m
+[37m[27/161] [35mmap: [34mrepeat generating ymap tests10[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests10[37m - 10 repetitions in 50.17ms (best: 3.94ms, worst: 7.85ms, median: 4.61ms, average: 5.02ms)
+repeat: npm run test -- --filter "\[27/" --seed 351011161[0m
+[37m[28/161] [35mmap: [34mrepeat generating ymap tests40[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests40[37m - 2 repetitions in 60.94ms (best: 29.48ms, worst: 31.45ms, median: 30.47ms, average: 30.47ms)
+repeat: npm run test -- --filter "\[28/" --seed 1849120837[0m
+[37m[29/161] [35mmap: [34mrepeat generating ymap tests42[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests42[37m - 2 repetitions in 56.92ms (best: 23.29ms, worst: 33.63ms, median: 28.46ms, average: 28.46ms)
+repeat: npm run test -- --filter "\[29/" --seed 1778749908[0m
+[37m[30/161] [35mmap: [34mrepeat generating ymap tests43[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests43[37m - 2 repetitions in 71.14ms (best: 34.16ms, worst: 36.98ms, median: 35.57ms, average: 35.57ms)
+repeat: npm run test -- --filter "\[30/" --seed 3555386661[0m
+[37m[31/161] [35mmap: [34mrepeat generating ymap tests44[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests44[37m - 3 repetitions in 80.89ms (best: 20.87ms, worst: 33.89ms, median: 26.14ms, average: 26.96ms)
+repeat: npm run test -- --filter "\[31/" --seed 3685813748[0m
+[37m[32/161] [35mmap: [34mrepeat generating ymap tests45[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests45[37m - 3 repetitions in 60.72ms (best: 14.45ms, worst: 24.55ms, median: 21.72ms, average: 20.24ms)
+repeat: npm run test -- --filter "\[32/" --seed 2550977910[0m
+[37m[33/161] [35mmap: [34mrepeat generating ymap tests46[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests46[37m - 4 repetitions in 58.19ms (best: 12.08ms, worst: 17.52ms, median: 14.3ms, average: 14.55ms)
+repeat: npm run test -- --filter "\[33/" --seed 894924877[0m
+[37m[34/161] [35mmap: [34mrepeat generating ymap tests300[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests300[37m - 1 repetitions in 60.32ms (best: 60.32ms, worst: 60.32ms, median: 60.32ms, average: 60.32ms)
+repeat: npm run test -- --filter "\[34/" --seed 1580956290[0m
+[37m[35/161] [35mmap: [34mrepeat generating ymap tests400[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests400[37m - 1 repetitions in 124.62ms (best: 124.62ms, worst: 124.62ms, median: 124.62ms, average: 124.62ms)
+repeat: npm run test -- --filter "\[35/" --seed 3159016286[0m
+[37m[36/161] [35mmap: [34mrepeat generating ymap tests500[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests500[37m - 1 repetitions in 88.21ms (best: 88.21ms, worst: 88.21ms, median: 88.21ms, average: 88.21ms)
+repeat: npm run test -- --filter "\[36/" --seed 1340012210[0m
+[37m[37/161] [35mmap: [34mrepeat generating ymap tests600[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests600[37m - 2 repetitions in 127.24ms (best: 42.38ms, worst: 84.86ms, median: 63.62ms, average: 63.62ms)
+repeat: npm run test -- --filter "\[37/" --seed 1076246752[0m
+[37m[38/161] [35mmap: [34mrepeat generating ymap tests1000[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests1000[37m - 1 repetitions in 249.67ms (best: 249.67ms, worst: 249.67ms, median: 249.67ms, average: 249.67ms)
+repeat: npm run test -- --filter "\[38/" --seed 3233929318[0m
+[37m[39/161] [35mmap: [34mrepeat generating ymap tests1800[0m
+[32m[1mSuccess: [2m[0mrepeat generating ymap tests1800[37m - 1 repetitions in 364.37ms (best: 364.37ms, worst: 364.37ms, median: 364.37ms, average: 364.37ms)
+repeat: npm run test -- --filter "\[39/" --seed 1358778719[0m
+[37m[40/161] [35mmap: [34mrepeat generating ymap tests5000[0m
+[37m[1mSkipped: [2mrepeat generating ymap tests5000[0m
+[37m[41/161] [35mmap: [34mrepeat generating ymap tests10000[0m
+[37m[1mSkipped: [2mrepeat generating ymap tests10000[0m
+[37m[42/161] [35mmap: [34mrepeat generating ymap tests100000[0m
+[37m[1mSkipped: [2mrepeat generating ymap tests100000[0m
+[37m[43/161] [35marray: [34mbasic update[0m
+[32m[1mSuccess: [2m[0mbasic update[37m in 500.1μs
+repeat: npm run test -- --filter "\[43/" [0m
+[37m[44/161] [35marray: [34mslice[0m
+[32m[1mSuccess: [2m[0mslice[37m in 297.2μs
+repeat: npm run test -- --filter "\[44/" [0m
+[37m[45/161] [35marray: [34mlength issue[0m
+[32m[1mSuccess: [2m[0mlength issue[37m in 998.1μs
+repeat: npm run test -- --filter "\[45/" [0m
+[37m[46/161] [35marray: [34mlength issue2[0m
+  [32m⇖ This Error was expected[0m
+  [ 'rectangle3', 'ellipse4', 'ellipse3', 'ellipse2' ]
+[32m[1mSuccess: [2m[0mlength issue2[37m in 1.93ms
+repeat: npm run test -- --filter "\[46/" [0m
+[37m[47/161] [35marray: [34mdelete insert[0m
+  [34mDoes not throw when deleting zero elements with position 0 [37m[0m
+  [32m⇖ This Error was expected[0m
+  [34mDoes not throw when deleting zero elements with valid position 1 [37m[0m
+[32m[1mSuccess: [2m[0mdelete insert[37m in 968.3μs
+repeat: npm run test -- --filter "\[47/" --seed 1000165533[0m
+[37m[48/161] [35marray: [34minsert three elements try reget property[0m
+[32m[1mSuccess: [2m[0minsert three elements try reget property[37m in 1.19ms
+repeat: npm run test -- --filter "\[48/" --seed 2748860416[0m
+[37m[49/161] [35marray: [34mconcurrent insert with three conflicts[0m
+[32m[1mSuccess: [2m[0mconcurrent insert with three conflicts[37m in 2.38ms
+repeat: npm run test -- --filter "\[49/" --seed 315762598[0m
+[37m[50/161] [35marray: [34minsert in delete[0m
+[32m[1mSuccess: [2m[0minsert in delete[37m in 2.42ms
+repeat: npm run test -- --filter "\[50/" --seed 673580304[0m
+[37m[51/161] [35marray: [34mconcurrent insert delete with three conflicts[0m
+[32m[1mSuccess: [2m[0mconcurrent insert delete with three conflicts[37m in 2.75ms
+repeat: npm run test -- --filter "\[51/" --seed 4288471787[0m
+[37m[52/161] [35marray: [34minsertions in late sync[0m
+[32m[1mSuccess: [2m[0minsertions in late sync[37m in 2.77ms
+repeat: npm run test -- --filter "\[52/" --seed 1846562176[0m
+[37m[53/161] [35marray: [34mdisconnect really prevents sending messages[0m
+[32m[1mSuccess: [2m[0mdisconnect really prevents sending messages[37m in 2.54ms
+repeat: npm run test -- --filter "\[53/" --seed 2415647088[0m
+[37m[54/161] [35marray: [34mdeletions in late sync[0m
+[32m[1mSuccess: [2m[0mdeletions in late sync[37m in 1.43ms
+repeat: npm run test -- --filter "\[54/" --seed 665189730[0m
+[37m[55/161] [35marray: [34minsert then merge delete on sync[0m
+[32m[1mSuccess: [2m[0minsert then merge delete on sync[37m in 1.38ms
+repeat: npm run test -- --filter "\[55/" --seed 1625753579[0m
+[37m[56/161] [35marray: [34minsert and delete events[0m
+[32m[1mSuccess: [2m[0minsert and delete events[37m in 1.47ms
+repeat: npm run test -- --filter "\[56/" --seed 2440864848[0m
+[37m[57/161] [35marray: [34mnested observer events[0m
+[32m[1mSuccess: [2m[0mnested observer events[37m in 1.5ms
+repeat: npm run test -- --filter "\[57/" --seed 3875518373[0m
+[37m[58/161] [35marray: [34minsert and delete events for types[0m
+[32m[1mSuccess: [2m[0minsert and delete events for types[37m in 970.8μs
+repeat: npm run test -- --filter "\[58/" --seed 2255061896[0m
+[37m[59/161] [35marray: [34mobserve deep event order[0m
+[32m[1mSuccess: [2m[0mobserve deep event order[37m in 846.1μs
+repeat: npm run test -- --filter "\[59/" --seed 1256377411[0m
+[37m[60/161] [35marray: [34mchange event[0m
+[32m[1mSuccess: [2m[0mchange event[37m in 1.85ms
+repeat: npm run test -- --filter "\[60/" --seed 2648905779[0m
+[37m[61/161] [35marray: [34minsert and delete events for types2[0m
+[32m[1mSuccess: [2m[0minsert and delete events for types2[37m in 1.06ms
+repeat: npm run test -- --filter "\[61/" --seed 3499537581[0m
+[37m[62/161] [35marray: [34mnew child does not emit event in transaction[0m
+[32m[1mSuccess: [2m[0mnew child does not emit event in transaction[37m in 510.7μs
+repeat: npm run test -- --filter "\[62/" --seed 1489987303[0m
+[37m[63/161] [35marray: [34mgarbage collector[0m
+[32m[1mSuccess: [2m[0mgarbage collector[37m in 1.44ms
+repeat: npm run test -- --filter "\[63/" --seed 172733518[0m
+[37m[64/161] [35marray: [34mevent target is set correctly on local[0m
+[32m[1mSuccess: [2m[0mevent target is set correctly on local[37m in 1.32ms
+repeat: npm run test -- --filter "\[64/" --seed 4003242407[0m
+[37m[65/161] [35marray: [34mevent target is set correctly on remote[0m
+[32m[1mSuccess: [2m[0mevent target is set correctly on remote[37m in 1.32ms
+repeat: npm run test -- --filter "\[65/" --seed 2982637539[0m
+[37m[66/161] [35marray: [34miterating array containing types[0m
+[32m[1mSuccess: [2m[0miterating array containing types[37m in 492.4μs
+repeat: npm run test -- --filter "\[66/" [0m
+[37m[67/161] [35marray: [34mrepeat generating yarray tests6[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests6[37m - 14 repetitions in 51.58ms (best: 2.29ms, worst: 5.28ms, median: 3.48ms, average: 3.68ms)
+repeat: npm run test -- --filter "\[67/" --seed 1097368144[0m
+[37m[68/161] [35marray: [34mrepeat generating yarray tests40[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests40[37m - 2 repetitions in 55.24ms (best: 26.79ms, worst: 28.45ms, median: 27.62ms, average: 27.62ms)
+repeat: npm run test -- --filter "\[68/" --seed 3788225325[0m
+[37m[69/161] [35marray: [34mrepeat generating yarray tests42[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests42[37m - 3 repetitions in 59.08ms (best: 18.77ms, worst: 20.51ms, median: 19.79ms, average: 19.69ms)
+repeat: npm run test -- --filter "\[69/" --seed 3527662824[0m
+[37m[70/161] [35marray: [34mrepeat generating yarray tests43[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests43[37m - 4 repetitions in 57.03ms (best: 12.59ms, worst: 16.97ms, median: 13.73ms, average: 14.26ms)
+repeat: npm run test -- --filter "\[70/" --seed 2757946149[0m
+[37m[71/161] [35marray: [34mrepeat generating yarray tests44[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests44[37m - 5 repetitions in 50.89ms (best: 7.32ms, worst: 13.24ms, median: 10.49ms, average: 10.18ms)
+repeat: npm run test -- --filter "\[71/" --seed 1075525297[0m
+[37m[72/161] [35marray: [34mrepeat generating yarray tests45[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests45[37m - 5 repetitions in 54.11ms (best: 9.08ms, worst: 14.34ms, median: 9.85ms, average: 10.82ms)
+repeat: npm run test -- --filter "\[72/" --seed 2642472505[0m
+[37m[73/161] [35marray: [34mrepeat generating yarray tests46[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests46[37m - 4 repetitions in 50.48ms (best: 9.86ms, worst: 14.69ms, median: 12.97ms, average: 12.62ms)
+repeat: npm run test -- --filter "\[73/" --seed 3353598112[0m
+[37m[74/161] [35marray: [34mrepeat generating yarray tests300[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests300[37m - 1 repetitions in 97.75ms (best: 97.75ms, worst: 97.75ms, median: 97.75ms, average: 97.75ms)
+repeat: npm run test -- --filter "\[74/" --seed 1559903547[0m
+[37m[75/161] [35marray: [34mrepeat generating yarray tests400[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests400[37m - 1 repetitions in 126.2ms (best: 126.2ms, worst: 126.2ms, median: 126.2ms, average: 126.2ms)
+repeat: npm run test -- --filter "\[75/" --seed 636974082[0m
+[37m[76/161] [35marray: [34mrepeat generating yarray tests500[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests500[37m - 1 repetitions in 95.01ms (best: 95.01ms, worst: 95.01ms, median: 95.01ms, average: 95.01ms)
+repeat: npm run test -- --filter "\[76/" --seed 2058099742[0m
+[37m[77/161] [35marray: [34mrepeat generating yarray tests600[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests600[37m - 1 repetitions in 107.2ms (best: 107.2ms, worst: 107.2ms, median: 107.2ms, average: 107.2ms)
+repeat: npm run test -- --filter "\[77/" --seed 2452358109[0m
+[37m[78/161] [35marray: [34mrepeat generating yarray tests1000[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests1000[37m - 1 repetitions in 194.79ms (best: 194.79ms, worst: 194.79ms, median: 194.79ms, average: 194.79ms)
+repeat: npm run test -- --filter "\[78/" --seed 727426870[0m
+[37m[79/161] [35marray: [34mrepeat generating yarray tests1800[0m
+[32m[1mSuccess: [2m[0mrepeat generating yarray tests1800[37m - 1 repetitions in 403.77ms (best: 403.77ms, worst: 403.77ms, median: 403.77ms, average: 403.77ms)
+repeat: npm run test -- --filter "\[79/" --seed 1255932022[0m
+[37m[80/161] [35marray: [34mrepeat generating yarray tests3000[0m
+[37m[1mSkipped: [2mrepeat generating yarray tests3000[0m
+[37m[81/161] [35marray: [34mrepeat generating yarray tests5000[0m
+[37m[1mSkipped: [2mrepeat generating yarray tests5000[0m
+[37m[82/161] [35marray: [34mrepeat generating yarray tests30000[0m
+[37m[1mSkipped: [2mrepeat generating yarray tests30000[0m
+[37m[83/161] [35mtext: [34mdelta after concurrent formatting[0m
+[32m[1mSuccess: [2m[0mdelta after concurrent formatting[37m in 2.99ms
+repeat: npm run test -- --filter "\[83/" --seed 4282990558[0m
+[37m[84/161] [35mtext: [34mbasic insert and delete[0m
+[32m[1mSuccess: [2m[0mbasic insert and delete[37m in 1.57ms
+repeat: npm run test -- --filter "\[84/" --seed 873321192[0m
+[37m[85/161] [35mtext: [34mbasic format[0m
+[32m[1mSuccess: [2m[0mbasic format[37m in 2.2ms
+repeat: npm run test -- --filter "\[85/" --seed 2002009122[0m
+[37m[86/161] [35mtext: [34mmultiline format[0m
+[32m[1mSuccess: [2m[0mmultiline format[37m in 412.1μs
+repeat: npm run test -- --filter "\[86/" [0m
+[37m[87/161] [35mtext: [34mnot merge empty lines format[0m
+[32m[1mSuccess: [2m[0mnot merge empty lines format[37m in 242μs
+repeat: npm run test -- --filter "\[87/" [0m
+[37m[88/161] [35mtext: [34mget delta with embeds[0m
+[32m[1mSuccess: [2m[0mget delta with embeds[37m in 348μs
+repeat: npm run test -- --filter "\[88/" --seed 2173958744[0m
+[37m[89/161] [35mtext: [34msnapshot[0m
+[32m[1mSuccess: [2m[0msnapshot[37m in 645.7μs
+repeat: npm run test -- --filter "\[89/" --seed 1627875949[0m
+[37m[90/161] [35mtext: [34msnapshot delete after[0m
+[32m[1mSuccess: [2m[0msnapshot delete after[37m in 267.2μs
+repeat: npm run test -- --filter "\[90/" --seed 1635190197[0m
+[37m[91/161] [35mtext: [34mto json[0m
+[32m[1mSuccess: [2m[0mto json[37m in 231.7μs
+repeat: npm run test -- --filter "\[91/" --seed 3998192333[0m
+[37m[92/161] [35mtext: [34mto delta embed attributes[0m
+[32m[1mSuccess: [2m[0mto delta embed attributes[37m in 445.1μs
+repeat: npm run test -- --filter "\[92/" --seed 2259395141[0m
+[37m[93/161] [35mtext: [34mto delta embed no attributes[0m
+[32m[1mSuccess: [2m[0mto delta embed no attributes[37m in 317.9μs
+repeat: npm run test -- --filter "\[93/" --seed 3363743176[0m
+[37m[94/161] [35mtext: [34mformatting removed[0m
+[32m[1mSuccess: [2m[0mformatting removed[37m in 281.7μs
+repeat: npm run test -- --filter "\[94/" --seed 2706465436[0m
+[37m[95/161] [35mtext: [34mformatting removed in mid text[0m
+[32m[1mSuccess: [2m[0mformatting removed in mid text[37m in 315.4μs
+repeat: npm run test -- --filter "\[95/" --seed 3440415851[0m
+[37m[96/161] [35mtext: [34minsert and delete at random positions[0m
+  [34mfinal length [37m49167[0m
+[32m[1mSuccess: [2m[0minsert and delete at random positions[37m in 5.07s
+repeat: npm run test -- --filter "\[96/" --seed 2820908142[0m
+[37m[97/161] [35mtext: [34mappend chars[0m
+[32m[1mSuccess: [2m[0mappend chars[37m in 134.51ms
+repeat: npm run test -- --filter "\[97/" --seed 990873502[0m
+[37m[98/161] [35mtext: [34mbest case[0m
+  [35mtime to create two million items in the best case[37m 32.35ms[0m
+  [35mtime to copy two million items to new Array[37m 2.21ms[0m
+[32m[1mSuccess: [2m[0mbest case[37m in 36.22ms
+repeat: npm run test -- --filter "\[98/" [0m
+[37m[99/161] [35mtext: [34mlarge fragmented document[0m
+  [35mtime to insert 100000 items[37m 148.05ms[0m
+  [35mtime to encode document[37m 29.39ms[0m
+  [34mDocument size: [37m100046[0m
+  [35mtime to apply 100000 updates[37m 114.79ms[0m
+[32m[1mSuccess: [2m[0mlarge fragmented document[37m in 293.4ms
+repeat: npm run test -- --filter "\[99/" [0m
+[37m[100/161] [35mtext: [34mincremental updates performance on large fragmented document[0m
+  [35mtime to insert 100000 items[37m 113.57ms[0m
+  [35mtime to merge 100000 updates (differential updates)[37m 85.19ms[0m
+  [35mtime to merge 100000 updates (ydoc updates)[37m 91.31ms[0m
+[32m[1mSuccess: [2m[0mincremental updates performance on large fragmented document[37m in 290.74ms
+repeat: npm run test -- --filter "\[100/" [0m
+[37m[101/161] [35mtext: [34msplit surrogate character[0m
+[32m[1mSuccess: [2m[0msplit surrogate character[37m in 14.1ms
+repeat: npm run test -- --filter "\[101/" --seed 2798697714[0m
+[37m[102/161] [35mtext: [34msearch marker bug1[0m
+[32m[1mSuccess: [2m[0msearch marker bug1[37m in 1.81ms
+repeat: npm run test -- --filter "\[102/" --seed 3483126159[0m
+[37m[103/161] [35mtext: [34mrepeat generate text changes5[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes5[37m - 15 repetitions in 51ms (best: 2.18ms, worst: 6.12ms, median: 3.11ms, average: 3.4ms)
+repeat: npm run test -- --filter "\[103/" --seed 1646255964[0m
+[37m[104/161] [35mtext: [34mrepeat generate text changes30[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes30[37m - 8 repetitions in 57.65ms (best: 5.37ms, worst: 9.03ms, median: 7.52ms, average: 7.21ms)
+repeat: npm run test -- --filter "\[104/" --seed 1062005116[0m
+[37m[105/161] [35mtext: [34mrepeat generate text changes40[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes40[37m - 7 repetitions in 55.18ms (best: 5.71ms, worst: 9.38ms, median: 8.05ms, average: 7.88ms)
+repeat: npm run test -- --filter "\[105/" --seed 2247842036[0m
+[37m[106/161] [35mtext: [34mrepeat generate text changes50[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes50[37m - 6 repetitions in 50.8ms (best: 7.05ms, worst: 10.74ms, median: 7.75ms, average: 8.47ms)
+repeat: npm run test -- --filter "\[106/" --seed 2737527427[0m
+[37m[107/161] [35mtext: [34mrepeat generate text changes70[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes70[37m - 5 repetitions in 53.26ms (best: 9.02ms, worst: 13.14ms, median: 10.49ms, average: 10.65ms)
+repeat: npm run test -- --filter "\[107/" --seed 3758471437[0m
+[37m[108/161] [35mtext: [34mrepeat generate text changes90[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes90[37m - 5 repetitions in 55.81ms (best: 10.16ms, worst: 12.54ms, median: 11.17ms, average: 11.16ms)
+repeat: npm run test -- --filter "\[108/" --seed 3454328550[0m
+[37m[109/161] [35mtext: [34mrepeat generate text changes300[0m
+[32m[1mSuccess: [2m[0mrepeat generate text changes300[37m - 2 repetitions in 85.93ms (best: 36.61ms, worst: 49.32ms, median: 42.96ms, average: 42.96ms)
+repeat: npm run test -- --filter "\[109/" --seed 4186509372[0m
+[37m[110/161] [35mtext: [34mrepeat generate quill changes1[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes1[37m - 27 repetitions in 50.42ms (best: 1.28ms, worst: 3.77ms, median: 1.7ms, average: 1.87ms)
+repeat: npm run test -- --filter "\[110/" --seed 1982031655[0m
+[37m[111/161] [35mtext: [34mrepeat generate quill changes2[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes2[37m - 25 repetitions in 50.53ms (best: 1.4ms, worst: 4.08ms, median: 1.93ms, average: 2.02ms)
+repeat: npm run test -- --filter "\[111/" --seed 791551474[0m
+[37m[112/161] [35mtext: [34mrepeat generate quill changes2 repeat[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes2 repeat[37m - 1 repetitions in 1.78s (best: 1.78s, worst: 1.78s, median: 1.78s, average: 1.78s)
+repeat: npm run test -- --filter "\[112/" --seed 3753271794[0m
+[37m[113/161] [35mtext: [34mrepeat generate quill changes3[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes3[37m - 27 repetitions in 51.48ms (best: 1.18ms, worst: 4.29ms, median: 1.8ms, average: 1.91ms)
+repeat: npm run test -- --filter "\[113/" --seed 2067260831[0m
+[37m[114/161] [35mtext: [34mrepeat generate quill changes30[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes30[37m - 6 repetitions in 54.19ms (best: 6.65ms, worst: 10.12ms, median: 9.26ms, average: 9.03ms)
+repeat: npm run test -- --filter "\[114/" --seed 4062201404[0m
+[37m[115/161] [35mtext: [34mrepeat generate quill changes40[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes40[37m - 4 repetitions in 58.44ms (best: 10.32ms, worst: 18.13ms, median: 15ms, average: 14.61ms)
+repeat: npm run test -- --filter "\[115/" --seed 3507287653[0m
+[37m[116/161] [35mtext: [34mrepeat generate quill changes70[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes70[37m - 3 repetitions in 71.37ms (best: 18.18ms, worst: 33.73ms, median: 19.46ms, average: 23.79ms)
+repeat: npm run test -- --filter "\[116/" --seed 884645645[0m
+[37m[117/161] [35mtext: [34mrepeat generate quill changes100[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes100[37m - 2 repetitions in 59.74ms (best: 25.82ms, worst: 33.92ms, median: 29.87ms, average: 29.87ms)
+repeat: npm run test -- --filter "\[117/" --seed 3371328971[0m
+[37m[118/161] [35mtext: [34mrepeat generate quill changes300[0m
+[32m[1mSuccess: [2m[0mrepeat generate quill changes300[37m - 1 repetitions in 155.63ms (best: 155.63ms, worst: 155.63ms, median: 155.63ms, average: 155.63ms)
+repeat: npm run test -- --filter "\[118/" --seed 2901544569[0m
+[37m[119/161] [35mxml: [34mset property[0m
+[32m[1mSuccess: [2m[0mset property[37m in 1.72ms
+repeat: npm run test -- --filter "\[119/" --seed 3691160601[0m
+[37m[120/161] [35mxml: [34mhas property[0m
+[32m[1mSuccess: [2m[0mhas property[37m in 956.9μs
+repeat: npm run test -- --filter "\[120/" --seed 2348510442[0m
+[37m[121/161] [35mxml: [34mevents[0m
+[32m[1mSuccess: [2m[0mevents[37m in 2.01ms
+repeat: npm run test -- --filter "\[121/" --seed 3454553871[0m
+[37m[122/161] [35mxml: [34mtreewalker[0m
+[32m[1mSuccess: [2m[0mtreewalker[37m in 1.96ms
+repeat: npm run test -- --filter "\[122/" --seed 1122213974[0m
+[37m[123/161] [35mxml: [34mytext attributes[0m
+[32m[1mSuccess: [2m[0mytext attributes[37m in 681.6μs
+repeat: npm run test -- --filter "\[123/" [0m
+[37m[124/161] [35mxml: [34msiblings[0m
+[32m[1mSuccess: [2m[0msiblings[37m in 334μs
+repeat: npm run test -- --filter "\[124/" [0m
+[37m[125/161] [35mxml: [34minsertafter[0m
+  [32m⇖ This Error was expected[0m
+[32m[1mSuccess: [2m[0minsertafter[37m in 561.9μs
+repeat: npm run test -- --filter "\[125/" [0m
+[37m[126/161] [35mencoding: [34mstruct references[0m
+[32m[1mSuccess: [2m[0mstruct references[37m in 53.1μs
+repeat: npm run test -- --filter "\[126/" [0m
+[37m[127/161] [35mencoding: [34mpermanent user data[0m
+[32m[1mSuccess: [2m[0mpermanent user data[37m in 29.25ms
+repeat: npm run test -- --filter "\[127/" [0m
+[37m[128/161] [35mencoding: [34mdiff state vector of update is empty[0m
+[32m[1mSuccess: [2m[0mdiff state vector of update is empty[37m in 605.2μs
+repeat: npm run test -- --filter "\[128/" [0m
+[37m[129/161] [35mencoding: [34mdiff state vector of update ignores skips[0m
+[32m[1mSuccess: [2m[0mdiff state vector of update ignores skips[37m in 521.2μs
+repeat: npm run test -- --filter "\[129/" [0m
+[37m[130/161] [35mundoredo: [34mundo text[0m
+[32m[1mSuccess: [2m[0mundo text[37m in 9.9ms
+repeat: npm run test -- --filter "\[130/" --seed 3716347255[0m
+[37m[131/161] [35mundoredo: [34mdouble undo[0m
+[32m[1mSuccess: [2m[0mdouble undo[37m in 331.8μs
+repeat: npm run test -- --filter "\[131/" [0m
+[37m[132/161] [35mundoredo: [34mundo map[0m
+[32m[1mSuccess: [2m[0mundo map[37m in 1.51ms
+repeat: npm run test -- --filter "\[132/" --seed 2116157213[0m
+[37m[133/161] [35mundoredo: [34mundo array[0m
+[32m[1mSuccess: [2m[0mundo array[37m in 2.56ms
+repeat: npm run test -- --filter "\[133/" --seed 213433550[0m
+[37m[134/161] [35mundoredo: [34mundo xml[0m
+[32m[1mSuccess: [2m[0mundo xml[37m in 1.3ms
+repeat: npm run test -- --filter "\[134/" --seed 1767412100[0m
+[37m[135/161] [35mundoredo: [34mundo events[0m
+[32m[1mSuccess: [2m[0mundo events[37m in 659.7μs
+repeat: npm run test -- --filter "\[135/" --seed 12434951[0m
+[37m[136/161] [35mundoredo: [34mtrack class[0m
+[32m[1mSuccess: [2m[0mtrack class[37m in 765.6μs
+repeat: npm run test -- --filter "\[136/" --seed 3964561169[0m
+[37m[137/161] [35mundoredo: [34mtype scope[0m
+[32m[1mSuccess: [2m[0mtype scope[37m in 709μs
+repeat: npm run test -- --filter "\[137/" --seed 697471649[0m
+[37m[138/161] [35mundoredo: [34mundo delete filter[0m
+[32m[1mSuccess: [2m[0mundo delete filter[37m in 736.7μs
+repeat: npm run test -- --filter "\[138/" --seed 1750721313[0m
+[37m[139/161] [35mundoredo: [34mundo until change performed[0m
+[32m[1mSuccess: [2m[0mundo until change performed[37m in 1.22ms
+repeat: npm run test -- --filter "\[139/" [0m
+[37m[140/161] [35mcompatibility: [34marray compatibility v1[0m
+[32m[1mSuccess: [2m[0marray compatibility v1[37m in 3.08ms
+repeat: npm run test -- --filter "\[140/" [0m
+[37m[141/161] [35mcompatibility: [34mmap decoding compatibility v1[0m
+[32m[1mSuccess: [2m[0mmap decoding compatibility v1[37m in 1.61ms
+repeat: npm run test -- --filter "\[141/" [0m
+[37m[142/161] [35mcompatibility: [34mtext decoding compatibility v1[0m
+[32m[1mSuccess: [2m[0mtext decoding compatibility v1[37m in 4.15ms
+repeat: npm run test -- --filter "\[142/" [0m
+[37m[143/161] [35msnapshot: [34mbasic restore snapshot[0m
+[32m[1mSuccess: [2m[0mbasic restore snapshot[37m in 936.6μs
+repeat: npm run test -- --filter "\[143/" [0m
+[37m[144/161] [35msnapshot: [34mempty restore snapshot[0m
+[32m[1mSuccess: [2m[0mempty restore snapshot[37m in 459.3μs
+repeat: npm run test -- --filter "\[144/" [0m
+[37m[145/161] [35msnapshot: [34mrestore snapshot with sub type[0m
+[32m[1mSuccess: [2m[0mrestore snapshot with sub type[37m in 438.6μs
+repeat: npm run test -- --filter "\[145/" [0m
+[37m[146/161] [35msnapshot: [34mrestore deleted item1[0m
+[32m[1mSuccess: [2m[0mrestore deleted item1[37m in 351.5μs
+repeat: npm run test -- --filter "\[146/" [0m
+[37m[147/161] [35msnapshot: [34mrestore left item[0m
+[32m[1mSuccess: [2m[0mrestore left item[37m in 391.1μs
+repeat: npm run test -- --filter "\[147/" [0m
+[37m[148/161] [35msnapshot: [34mdeleted items base[0m
+[32m[1mSuccess: [2m[0mdeleted items base[37m in 354.6μs
+repeat: npm run test -- --filter "\[148/" [0m
+[37m[149/161] [35msnapshot: [34mdeleted items2[0m
+[32m[1mSuccess: [2m[0mdeleted items2[37m in 379.3μs
+repeat: npm run test -- --filter "\[149/" [0m
+[37m[150/161] [35msnapshot: [34mdependent changes[0m
+[32m[1mSuccess: [2m[0mdependent changes[37m in 1ms
+repeat: npm run test -- --filter "\[150/" --seed 659247564[0m
+[37m[151/161] [35mupdates: [34mmerge updates[0m
+[32m[1mSuccess: [2m[0mmerge updates[37m in 3.22ms
+repeat: npm run test -- --filter "\[151/" --seed 349797549[0m
+[37m[152/161] [35mupdates: [34mmerge updates1[0m
+  [34m [37mUsing encoder: V1[0m
+  [34m [37mUsing encoder: V2[0m
+  [34m [37mUsing encoder: Merge via Y.Doc[0m
+[32m[1mSuccess: [2m[0mmerge updates1[37m in 21.37ms
+repeat: npm run test -- --filter "\[152/" [0m
+[37m[153/161] [35mupdates: [34mmerge updates2[0m
+  [34m [37mUsing encoder: V1[0m
+  [34m [37mUsing encoder: V2[0m
+  [34m [37mUsing encoder: Merge via Y.Doc[0m
+[32m[1mSuccess: [2m[0mmerge updates2[37m in 22.91ms
+repeat: npm run test -- --filter "\[153/" [0m
+[37m[154/161] [35mupdates: [34mmerge pending updates[0m
+[32m[1mSuccess: [2m[0mmerge pending updates[37m in 1.19ms
+repeat: npm run test -- --filter "\[154/" [0m
+[37m[155/161] [35mrelativePositions: [34mrelative position case1[0m
+[32m[1mSuccess: [2m[0mrelative position case1[37m in 956.5μs
+repeat: npm run test -- --filter "\[155/" [0m
+[37m[156/161] [35mrelativePositions: [34mrelative position case2[0m
+[32m[1mSuccess: [2m[0mrelative position case2[37m in 201.7μs
+repeat: npm run test -- --filter "\[156/" [0m
+[37m[157/161] [35mrelativePositions: [34mrelative position case3[0m
+[32m[1mSuccess: [2m[0mrelative position case3[37m in 291.1μs
+repeat: npm run test -- --filter "\[157/" [0m
+[37m[158/161] [35mrelativePositions: [34mrelative position case4[0m
+[32m[1mSuccess: [2m[0mrelative position case4[37m in 164.1μs
+repeat: npm run test -- --filter "\[158/" [0m
+[37m[159/161] [35mrelativePositions: [34mrelative position case5[0m
+[32m[1mSuccess: [2m[0mrelative position case5[37m in 193.4μs
+repeat: npm run test -- --filter "\[159/" [0m
+[37m[160/161] [35mrelativePositions: [34mrelative position case6[0m
+[32m[1mSuccess: [2m[0mrelative position case6[37m in 119.7μs
+repeat: npm run test -- --filter "\[160/" [0m
+[37m[161/161] [35mrelativePositions: [34mrelative position association difference[0m
+[32m[1mSuccess: [2m[0mrelative position association difference[37m in 216.5μs
+repeat: npm run test -- --filter "\[161/" [0m
+[0m
+[32m[1mAll tests successful![37m[2m in 11.72s[0m

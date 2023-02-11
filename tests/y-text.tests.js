@@ -60,6 +60,143 @@ export const testBasicInsertAndDelete = tc => {
 /**
  * @param {t.TestCase} tc
  */
+export const testInsertionInDeletedArea = tc => {
+  const { testConnector, users, text0, text1 } = init(tc, { users: 2 })
+  text0.insert(0, 'ab')
+  testConnector.flushAllMessages()
+  t.assert(text0.toString() === 'ab', 'Basic insert works')
+
+
+  text1.insert(1, 'x')
+  text0.delete(0, 2)
+  text1.insert(1, 'x')
+  testConnector.flushAllMessages()
+  t.assert(text0.toString() === 'xx', 'deletions not delete concurrently added text')
+
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
+export const testDoubleInsertForText = tc => {
+  const { testConnector, users, text0, text1 } = init(tc, { users: 2 })
+  text0.insert(0, '1')
+  text1.insert(0, '2')
+  testConnector.flushAllMessages()
+  t.assert(text0.toString() === '12', 'double insert')
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
+ export const testDoubleInsertForArray = tc => {
+	const { testConnector, users, array0, array1 } = init(tc, { users: 2 })
+	array0.insert(0, ['1'])
+	array1.insert(0, ['2'])
+	testConnector.flushAllMessages()
+	console.log(array0.toJSON());
+	t.compare(array0.toJSON(), ['1', '2'], '.toJSON() works after syncccc')
+	compare(users)
+  }
+
+/**
+ * @param {t.TestCase} tc
+ */
+export const testInsertAfterReplaceIndex = tc => {
+  const { testConnector, users, text0, text1 } = init(tc, { users: 2 })
+  text0.insert(0, 'a')
+  testConnector.flushAllMessages()
+  text0.delete(0, 1)
+  text0.insert(0, '1')
+  text1.insert(0, '2')
+  testConnector.flushAllMessages()
+  t.assert(text0.toString() === '21', 'last-to-first order')
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
+export const testInsertAfterReplaceIndexForArray = tc => {
+  const { testConnector, users, array0, array1 } = init(tc, { users: 2 })
+  array0.insert(0, ['a'])
+  testConnector.flushAllMessages()
+  array0.delete(0, 1)
+  array0.insert(0, ['1'])
+  array1.insert(0, ['2'])
+  testConnector.flushAllMessages()
+  console.log(array0.toJSON());
+  t.compare(array0.toJSON(), ['1', '2'], 'First-to-last order')
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
+export const testInsertAfterReplaceIndexAndBeyond = tc => {
+  const { testConnector, users, text0, text1, array0, array1 } = init(tc, { users: 2 })
+  text0.insert(0, 'ab')
+  array0.insert(0, ['a', 'b'])
+  testConnector.flushAllMessages()
+  text0.delete(0, 2)
+  array0.delete(0, 2)
+  text0.insert(0, '1')
+  array0.insert(0, ['1'])
+  text1.insert(0, '2')
+  array1.insert(0, ['2'])
+  testConnector.flushAllMessages()
+  t.assert(text0.toString() === '21', 'insert after replace [index, ...]')
+  t.compare(array0.toJSON(), ['1', '2'], '.toJSON() works after sync')
+
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
+export const testInsertAfterReplaceBeforeIndexAndIndex = tc => {
+  const { testConnector, users, text0, text1, array0, array1 } = init(tc, { users: 2 })
+  text0.insert(0, 'ab')
+  array0.insert(0, ['a', 'b'])
+  testConnector.flushAllMessages()
+  text0.delete(0, 2)
+  array0.delete(0, 2)
+  text0.insert(0, '1')
+  array0.insert(0, ['1'])
+  text1.insert(1, '2')
+  array1.insert(1, ['2'])
+  testConnector.flushAllMessages()
+  t.assert(text0.toString() === '21', 'insert after replace [..., index]')
+  t.compare(array0.toJSON(), ['1', '2'], '.toJSON() works after sync')
+
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
+export const testInsertAfterReplaceBeforeIndexAndIndexAndBeyond = tc => {
+  const { testConnector, users, text0: txt0, text1: txt1, array0: arr0, array1: arr1 } = init(tc, { users: 2 })
+  txt0.insert(0, 'abc')
+  arr0.insert(0, ['a', 'b', 'c'])
+  testConnector.flushAllMessages()
+  txt0.delete(0, 3)
+  arr0.delete(0, 3)
+  txt0.insert(0, '1')
+  arr0.insert(0, ['1'])
+  txt1.insert(1, '2')
+  arr1.insert(1, ['2'])
+  testConnector.flushAllMessages()
+  t.assert(txt0.toString() === '21', 'last-to-first')
+  t.compare(arr0.toJSON(), ['1', '2'], 'first-to-last')
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
 export const testBasicFormat = tc => {
   const { users, text0 } = init(tc, { users: 2 })
   let delta

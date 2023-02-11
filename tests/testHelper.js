@@ -55,7 +55,7 @@ const useV1Encoding = () => {
 }
 
 const useV2Encoding = () => {
-  console.error('sync protocol doesnt support v2 protocol yet, fallback to v1 encoding') // @Todo
+  //console.error('sync protocol doesnt support v2 protocol yet, fallback to v1 encoding') // @Todo
   useV2 = false
   enc = encV1
 }

@@ -146,6 +146,20 @@ export const testConcurrentInsertWithThreeConflicts = tc => {
 /**
  * @param {t.TestCase} tc
  */
+export const testInsertInDelete = tc => {
+  const { testConnector, users, array0, array1, array2 } = init(tc, { users: 3 })
+  array0.insert(0, ['x', 'y'])
+  testConnector.flushAllMessages()
+  array0.insert(1, [1]) // Is preserved
+  array2.delete(0, 2)
+  testConnector.flushAllMessages()
+  t.compare(array1.toJSON(), [1], '.toJSON() works after sync')
+  compare(users)
+}
+
+/**
+ * @param {t.TestCase} tc
+ */
 export const testConcurrentInsertDeleteWithThreeConflicts = tc => {
   const { testConnector, users, array0, array1, array2 } = init(tc, { users: 3 })
   array0.insert(0, ['x', 'y', 'z'])
